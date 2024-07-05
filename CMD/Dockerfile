@@ -1,2 +1,3 @@
 FROM run:1.0
-CMD [ "echo", "Hello World!!"]
+RUN dnf install nginx -y
+CMD [ "nginx", "-g","daemon off;"]

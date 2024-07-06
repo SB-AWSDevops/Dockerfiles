@@ -6,6 +6,7 @@ RUN cat /etc/os-release
 
 # Use shell form to execute cat /etc/*release when the container starts
 ARG course=devops
-ENV place=vizag
+ARG place=hyd
+ENV place=${place}
 RUN echo "course is ${course} and  place is ${place} "
 CMD [ "sleep","100" ]

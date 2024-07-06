@@ -1,4 +1,8 @@
 ARG version
 FROM almalinux:${version}
-RUN cat /etc/os-release
-CMD [ "cat", "/etc/os-release" ]
+
+# Display all *release files during the build process
+RUN cat /etc/*release
+
+# Use shell form to execute cat /etc/*release when the container starts
+CMD cat /etc/*release

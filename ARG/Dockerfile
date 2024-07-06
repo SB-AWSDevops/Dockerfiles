@@ -7,6 +7,6 @@ RUN cat /etc/os-release
 # Use shell form to execute cat /etc/*release when the container starts
 CMD ["cat", "/etc/os-release"]
 
-ARG course:-aws
+ARG ${course:-aws}
 RUN echo "course is ${course}"
 CMD [ "sleep","100" ]
